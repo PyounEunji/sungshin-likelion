@@ -1,0 +1,118 @@
+<!--최상단 네비게이션 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>The Lion Queen</title>
+
+    <!--부트스트랩 추가-->
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!--부트스트랩 끝-->
+   
+    <!-- Custom CSS -->
+    <style>
+        /*전체*/
+        body{
+         overflow:hidden;
+         font-size: 15px;
+         font-weight: normal;
+         line-height: 18px;
+        }
+        
+        /*최상단 바*/
+        .topbar-inner, .topbar .fill {
+            background-color: #5354A2;
+            background-repeat: repeat-x;
+            -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25),inset 0 -1px 0 rgba(0,0,0,0.1);
+            -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25),inset 0 -1px 0 rgba(0,0,0,0.1);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.25),inset 0 -1px 0 rgba(0,0,0,0.1);
+        }
+        
+        /*앵커태크*/
+        /*기본*/
+        a{
+            outline: 0;
+            color: #ffffff;
+        }
+        
+        /*액션*/
+        a:hover,
+        a:focus,
+        a:active,
+        a.active {
+            outline: 0;
+            color: #5354A2;
+        }
+        /*정렬위함*/
+        .nav>li>a {
+        position: relative;
+        display: block;
+        padding: 5px 10px;
+        }
+        /*마우스 액션 왔을 때*/
+        .nav>li>a:focus, .nav>li>a:hover {
+            text-decoration: none;
+            background-color: #fff;
+        }
+        
+    
+    </style>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <div id=main>
+    <!--최상단바-->
+        <div id="tray" class="topbar" style="width: auto;">
+            <div class="fill">
+                <div class="container">
+                    <!--높이가 30px-->
+                    <ul class="nav navbar-nav navbar-right" style="height: 30px;">
+                        <li>
+                            <a><b>likelionsungshin@gmail.com</b></a>
+                        </li>                       
+                       
+                        <li>
+                            <a href="https://www.facebook.com/likelionsungshin" target="new">Facebook</a>
+                        </li>
+
+                </div>
+            </div>
+        </div>
+        <!--삽입하고자하는 또다른 페이지를 넣으면 됨-->
+         <iframe id="preview" src="./home/main.erb" frameborder="0" width="100%"></iframe>
+    </div> 
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+         <script>
+         
+            $(function(){
+                    function fix_height(){
+                            var h = $("#tray").height();   
+                            $("#preview").attr("height", (($(window).height()) - h) + "px");
+                    }
+                    $(window).resize(function(){ fix_height(); }).resize();
+                    //$("#preview").contentWindow.focus();
+            });
+        </script>
+</body>
+
+</html>
