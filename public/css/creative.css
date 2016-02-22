@@ -492,6 +492,11 @@ section#contact .form-group input.form-control {
     margin-bottom: 50px;
 }
 
+.team-member img {
+    margin: 0 auto;
+    border: 7px solid white;
+}
+
 section#contact {
     background-color: #222;
     background-image: url(../img/map-image.png);
