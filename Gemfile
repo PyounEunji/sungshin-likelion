@@ -46,4 +46,3 @@ group :development do
   
   gem 'mailgun_rails'
 end
-
